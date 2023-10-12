@@ -61,7 +61,7 @@ class TfLiteLandmarkClassifier(
                     score = category.score
                 )
             }
-        }?.distinctBy { it.name } ?: emptyList()
+        }?.distinctBy { it.name }?.sortedByDescending { it.score }?.take(3) ?: emptyList()
     }
 
     private fun getOrientationFromRotation(rotation: Int): ImageProcessingOptions.Orientation {
