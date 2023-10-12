@@ -18,6 +18,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        setProperty("archivesBaseName", "TfLandmark_asia-v$versionName")
     }
 
     buildTypes {
